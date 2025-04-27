@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "LinkBase Scraper",
+  "version": "1.0",
+  "description": "Part of the LinkBase platform, this Chrome extension helps you identify and extract potential networking candidates directly from LinkedIn company pages. It scrapes publicly available data such as names, titles, and profile links to streamline your outreach and relationship-building process.",
+  "permissions": ["scripting", "tabs", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
